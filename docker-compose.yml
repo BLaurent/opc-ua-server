@@ -1,0 +1,14 @@
+version: '3.6'
+
+
+services:
+  opcua-server:
+    container_name: opcua-server
+    image: blaurent/opcua-server
+    build:
+      context: ./
+    restart: unless-stopped
+    ports:
+      - "4840:4840"
+
+
