@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 opcua = "*"
 cryptography = "*"
+ipython = "*"
 
 [dev-packages]
 
