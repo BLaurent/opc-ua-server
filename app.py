@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
   # setup our server
   SERVER = Server()
-  SERVER.set_endpoint("opc.tcp://localhost:9999")
+  SERVER.set_endpoint("opc.tcp://0.0.0.0:4840")
   SERVER.set_security_policy([
     ua.SecurityPolicyType.NoSecurity,
     ua.SecurityPolicyType.Basic128Rsa15_SignAndEncrypt,
