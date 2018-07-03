@@ -7,7 +7,8 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-client = Client("opc.tcp://172.23.0.254:4840/freeopcua/server/")
+# client = Client("opc.tcp://172.23.0.254:4840")
+client = Client("opc.tcp://localhost:9999")
 client.connect()
 
 
@@ -17,10 +18,7 @@ def test():
 
   print("Children of root are: ", root.get_children())
 
-  variable = root.get_child(["0:Objects", "2:Chocolate", "2:temperature"])
-  print(variable.get_value())
-
-  var=client.get_node("ns=2;i=2")
+  var=client.get_node("ns=5;s=temperature")
   print(var.get_value())
 
 
